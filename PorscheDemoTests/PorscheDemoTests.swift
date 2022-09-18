@@ -32,5 +32,20 @@ class PorscheDemoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testGetPhotos() throws {
+        let exp = expectation(description: "testGetPhotos")
+        let service = RestDataService()
+        service.getPhotos(query: "Porsche cars", count: 20) { result in
+            switch result {
+            case .success(let resp):
+                print(resp)
+                exp.fulfill()
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+        }
+        waitForExpectations(timeout: 5)
+    }
 
 }

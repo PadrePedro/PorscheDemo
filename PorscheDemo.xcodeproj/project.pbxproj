@@ -16,6 +16,15 @@
 		D29993FB28D6B48100AB9FA4 /* PorscheDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29993FA28D6B48100AB9FA4 /* PorscheDemoTests.swift */; };
 		D299940528D6B48200AB9FA4 /* PorscheDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299940428D6B48200AB9FA4 /* PorscheDemoUITests.swift */; };
 		D299940728D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */; };
+		D299941528D6B4C000AB9FA4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941428D6B4C000AB9FA4 /* DataService.swift */; };
+		D299941828D6B55F00AB9FA4 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941728D6B55F00AB9FA4 /* PhotoData.swift */; };
+		D299941A28D6B85E00AB9FA4 /* RestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941928D6B85E00AB9FA4 /* RestDataService.swift */; };
+		D299941D28D6C1DC00AB9FA4 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941C28D6C1DC00AB9FA4 /* LiveData.swift */; };
+		D299942028D6C31D00AB9FA4 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941F28D6C31D00AB9FA4 /* PhotosViewController.swift */; };
+		D299942228D6C34D00AB9FA4 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942128D6C34D00AB9FA4 /* PhotosViewModel.swift */; };
+		D299942528D6C6E000AB9FA4 /* PhotoCollectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942428D6C6E000AB9FA4 /* PhotoCollectViewCell.swift */; };
+		D299942728D7910300AB9FA4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942628D7910300AB9FA4 /* ImageLoader.swift */; };
+		D299942928D7B3F400AB9FA4 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942828D7B3F400AB9FA4 /* UIViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		D299940028D6B48200AB9FA4 /* PorscheDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D299940428D6B48200AB9FA4 /* PorscheDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoUITests.swift; sourceTree = "<group>"; };
 		D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D299941428D6B4C000AB9FA4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		D299941728D6B55F00AB9FA4 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
+		D299941928D6B85E00AB9FA4 /* RestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDataService.swift; sourceTree = "<group>"; };
+		D299941C28D6C1DC00AB9FA4 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
+		D299941F28D6C31D00AB9FA4 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		D299942128D6C34D00AB9FA4 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		D299942428D6C6E000AB9FA4 /* PhotoCollectViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectViewCell.swift; sourceTree = "<group>"; };
+		D299942628D7910300AB9FA4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		D299942828D7B3F400AB9FA4 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,11 @@
 		D29993E228D6B47E00AB9FA4 /* PorscheDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D299942328D6C6BF00AB9FA4 /* View */,
+				D299941E28D6C30200AB9FA4 /* ViewController */,
+				D299941B28D6C1CC00AB9FA4 /* ViewModel */,
+				D299941628D6B54A00AB9FA4 /* Model */,
+				D299941328D6B4A100AB9FA4 /* Service */,
 				D29993E328D6B47E00AB9FA4 /* AppDelegate.swift */,
 				D29993E528D6B47E00AB9FA4 /* SceneDelegate.swift */,
 				D29993E728D6B47E00AB9FA4 /* ViewController.swift */,
@@ -125,6 +148,50 @@
 				D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */,
 			);
 			path = PorscheDemoUITests;
+			sourceTree = "<group>";
+		};
+		D299941328D6B4A100AB9FA4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D299941428D6B4C000AB9FA4 /* DataService.swift */,
+				D299941928D6B85E00AB9FA4 /* RestDataService.swift */,
+				D299942628D7910300AB9FA4 /* ImageLoader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D299941628D6B54A00AB9FA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D299941728D6B55F00AB9FA4 /* PhotoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D299941B28D6C1CC00AB9FA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D299941C28D6C1DC00AB9FA4 /* LiveData.swift */,
+				D299942128D6C34D00AB9FA4 /* PhotosViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D299941E28D6C30200AB9FA4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D299941F28D6C31D00AB9FA4 /* PhotosViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D299942328D6C6BF00AB9FA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D299942428D6C6E000AB9FA4 /* PhotoCollectViewCell.swift */,
+				D299942828D7B3F400AB9FA4 /* UIViewExt.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +325,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D299942228D6C34D00AB9FA4 /* PhotosViewModel.swift in Sources */,
+				D299941D28D6C1DC00AB9FA4 /* LiveData.swift in Sources */,
+				D299942528D6C6E000AB9FA4 /* PhotoCollectViewCell.swift in Sources */,
+				D299942028D6C31D00AB9FA4 /* PhotosViewController.swift in Sources */,
+				D299942928D7B3F400AB9FA4 /* UIViewExt.swift in Sources */,
 				D29993E828D6B47E00AB9FA4 /* ViewController.swift in Sources */,
+				D299942728D7910300AB9FA4 /* ImageLoader.swift in Sources */,
+				D299941A28D6B85E00AB9FA4 /* RestDataService.swift in Sources */,
+				D299941828D6B55F00AB9FA4 /* PhotoData.swift in Sources */,
 				D29993E428D6B47E00AB9FA4 /* AppDelegate.swift in Sources */,
 				D29993E628D6B47E00AB9FA4 /* SceneDelegate.swift in Sources */,
+				D299941528D6B4C000AB9FA4 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +521,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,6 +550,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
