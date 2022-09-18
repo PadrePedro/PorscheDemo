@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D29993E428D6B47E00AB9FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29993E328D6B47E00AB9FA4 /* AppDelegate.swift */; };
+		D29993E628D6B47E00AB9FA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29993E528D6B47E00AB9FA4 /* SceneDelegate.swift */; };
+		D29993E828D6B47E00AB9FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29993E728D6B47E00AB9FA4 /* ViewController.swift */; };
+		D29993EB28D6B47E00AB9FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29993E928D6B47E00AB9FA4 /* Main.storyboard */; };
+		D29993ED28D6B48100AB9FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29993EC28D6B48100AB9FA4 /* Assets.xcassets */; };
+		D29993F028D6B48100AB9FA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29993EE28D6B48100AB9FA4 /* LaunchScreen.storyboard */; };
+		D29993FB28D6B48100AB9FA4 /* PorscheDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29993FA28D6B48100AB9FA4 /* PorscheDemoTests.swift */; };
+		D299940528D6B48200AB9FA4 /* PorscheDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299940428D6B48200AB9FA4 /* PorscheDemoUITests.swift */; };
+		D299940728D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D29993F728D6B48100AB9FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29993D828D6B47E00AB9FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D29993DF28D6B47E00AB9FA4;
+			remoteInfo = PorscheDemo;
+		};
+		D299940128D6B48200AB9FA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29993D828D6B47E00AB9FA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D29993DF28D6B47E00AB9FA4;
+			remoteInfo = PorscheDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D29993E028D6B47E00AB9FA4 /* PorscheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorscheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29993E328D6B47E00AB9FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D29993E528D6B47E00AB9FA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D29993E728D6B47E00AB9FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D29993EA28D6B47E00AB9FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D29993EC28D6B48100AB9FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D29993EF28D6B48100AB9FA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D29993F128D6B48100AB9FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29993F628D6B48100AB9FA4 /* PorscheDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29993FA28D6B48100AB9FA4 /* PorscheDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoTests.swift; sourceTree = "<group>"; };
+		D299940028D6B48200AB9FA4 /* PorscheDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D299940428D6B48200AB9FA4 /* PorscheDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoUITests.swift; sourceTree = "<group>"; };
+		D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D29993DD28D6B47E00AB9FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993F328D6B48100AB9FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993FD28D6B48200AB9FA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D29993D728D6B47E00AB9FA4 = {
+			isa = PBXGroup;
+			children = (
+				D29993E228D6B47E00AB9FA4 /* PorscheDemo */,
+				D29993F928D6B48100AB9FA4 /* PorscheDemoTests */,
+				D299940328D6B48200AB9FA4 /* PorscheDemoUITests */,
+				D29993E128D6B47E00AB9FA4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D29993E128D6B47E00AB9FA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D29993E028D6B47E00AB9FA4 /* PorscheDemo.app */,
+				D29993F628D6B48100AB9FA4 /* PorscheDemoTests.xctest */,
+				D299940028D6B48200AB9FA4 /* PorscheDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D29993E228D6B47E00AB9FA4 /* PorscheDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D29993E328D6B47E00AB9FA4 /* AppDelegate.swift */,
+				D29993E528D6B47E00AB9FA4 /* SceneDelegate.swift */,
+				D29993E728D6B47E00AB9FA4 /* ViewController.swift */,
+				D29993E928D6B47E00AB9FA4 /* Main.storyboard */,
+				D29993EC28D6B48100AB9FA4 /* Assets.xcassets */,
+				D29993EE28D6B48100AB9FA4 /* LaunchScreen.storyboard */,
+				D29993F128D6B48100AB9FA4 /* Info.plist */,
+			);
+			path = PorscheDemo;
+			sourceTree = "<group>";
+		};
+		D29993F928D6B48100AB9FA4 /* PorscheDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D29993FA28D6B48100AB9FA4 /* PorscheDemoTests.swift */,
+			);
+			path = PorscheDemoTests;
+			sourceTree = "<group>";
+		};
+		D299940328D6B48200AB9FA4 /* PorscheDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D299940428D6B48200AB9FA4 /* PorscheDemoUITests.swift */,
+				D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */,
+			);
+			path = PorscheDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D29993DF28D6B47E00AB9FA4 /* PorscheDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D299940A28D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemo" */;
+			buildPhases = (
+				D29993DC28D6B47E00AB9FA4 /* Sources */,
+				D29993DD28D6B47E00AB9FA4 /* Frameworks */,
+				D29993DE28D6B47E00AB9FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PorscheDemo;
+			productName = PorscheDemo;
+			productReference = D29993E028D6B47E00AB9FA4 /* PorscheDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D29993F528D6B48100AB9FA4 /* PorscheDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D299940D28D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemoTests" */;
+			buildPhases = (
+				D29993F228D6B48100AB9FA4 /* Sources */,
+				D29993F328D6B48100AB9FA4 /* Frameworks */,
+				D29993F428D6B48100AB9FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D29993F828D6B48100AB9FA4 /* PBXTargetDependency */,
+			);
+			name = PorscheDemoTests;
+			productName = PorscheDemoTests;
+			productReference = D29993F628D6B48100AB9FA4 /* PorscheDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D29993FF28D6B48200AB9FA4 /* PorscheDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D299941028D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemoUITests" */;
+			buildPhases = (
+				D29993FC28D6B48200AB9FA4 /* Sources */,
+				D29993FD28D6B48200AB9FA4 /* Frameworks */,
+				D29993FE28D6B48200AB9FA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D299940228D6B48200AB9FA4 /* PBXTargetDependency */,
+			);
+			name = PorscheDemoUITests;
+			productName = PorscheDemoUITests;
+			productReference = D299940028D6B48200AB9FA4 /* PorscheDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D29993D828D6B47E00AB9FA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D29993DF28D6B47E00AB9FA4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					D29993F528D6B48100AB9FA4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D29993DF28D6B47E00AB9FA4;
+					};
+					D29993FF28D6B48200AB9FA4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = D29993DF28D6B47E00AB9FA4;
+					};
+				};
+			};
+			buildConfigurationList = D29993DB28D6B47E00AB9FA4 /* Build configuration list for PBXProject "PorscheDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D29993D728D6B47E00AB9FA4;
+			productRefGroup = D29993E128D6B47E00AB9FA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D29993DF28D6B47E00AB9FA4 /* PorscheDemo */,
+				D29993F528D6B48100AB9FA4 /* PorscheDemoTests */,
+				D29993FF28D6B48200AB9FA4 /* PorscheDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D29993DE28D6B47E00AB9FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29993F028D6B48100AB9FA4 /* LaunchScreen.storyboard in Resources */,
+				D29993ED28D6B48100AB9FA4 /* Assets.xcassets in Resources */,
+				D29993EB28D6B47E00AB9FA4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993F428D6B48100AB9FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993FE28D6B48200AB9FA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D29993DC28D6B47E00AB9FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29993E828D6B47E00AB9FA4 /* ViewController.swift in Sources */,
+				D29993E428D6B47E00AB9FA4 /* AppDelegate.swift in Sources */,
+				D29993E628D6B47E00AB9FA4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993F228D6B48100AB9FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29993FB28D6B48100AB9FA4 /* PorscheDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29993FC28D6B48200AB9FA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D299940728D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift in Sources */,
+				D299940528D6B48200AB9FA4 /* PorscheDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D29993F828D6B48100AB9FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D29993DF28D6B47E00AB9FA4 /* PorscheDemo */;
+			targetProxy = D29993F728D6B48100AB9FA4 /* PBXContainerItemProxy */;
+		};
+		D299940228D6B48200AB9FA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D29993DF28D6B47E00AB9FA4 /* PorscheDemo */;
+			targetProxy = D299940128D6B48200AB9FA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D29993E928D6B47E00AB9FA4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29993EA28D6B47E00AB9FA4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D29993EE28D6B48100AB9FA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29993EF28D6B48100AB9FA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D299940828D6B48200AB9FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D299940928D6B48200AB9FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D299940B28D6B48200AB9FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PorscheDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D299940C28D6B48200AB9FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PorscheDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D299940E28D6B48200AB9FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PorscheDemo.app/PorscheDemo";
+			};
+			name = Debug;
+		};
+		D299940F28D6B48200AB9FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PorscheDemo.app/PorscheDemo";
+			};
+			name = Release;
+		};
+		D299941128D6B48200AB9FA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PorscheDemo;
+			};
+			name = Debug;
+		};
+		D299941228D6B48200AB9FA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 248EF9MPA4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pedro.PorscheDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PorscheDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D29993DB28D6B47E00AB9FA4 /* Build configuration list for PBXProject "PorscheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299940828D6B48200AB9FA4 /* Debug */,
+				D299940928D6B48200AB9FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D299940A28D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299940B28D6B48200AB9FA4 /* Debug */,
+				D299940C28D6B48200AB9FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D299940D28D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299940E28D6B48200AB9FA4 /* Debug */,
+				D299940F28D6B48200AB9FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D299941028D6B48200AB9FA4 /* Build configuration list for PBXNativeTarget "PorscheDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299941128D6B48200AB9FA4 /* Debug */,
+				D299941228D6B48200AB9FA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D29993D828D6B47E00AB9FA4 /* Project object */;
+}
