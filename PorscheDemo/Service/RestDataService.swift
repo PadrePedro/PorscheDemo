@@ -18,7 +18,7 @@ class RestDataService: DataService {
     
     func getPhotos(query: String, count: Int, completion: @escaping (Result<[PhotoData], Error>) -> Void) {
         let queryString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let urlString = "https://api.unsplash.com/search/photos?query=\(queryString)&per_page=\(count)&client_id=\(accessKey)"
+        let urlString = "https://api.unsplash.com/search/photos?query=\(queryString)&per_page=\(count)&page=2&client_id=\(accessKey)"
         guard let url = URL(string: urlString) else {
             completion(Result.failure(QueryError.invalidUrl))
             return

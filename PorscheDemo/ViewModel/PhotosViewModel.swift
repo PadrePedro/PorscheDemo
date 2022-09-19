@@ -20,7 +20,7 @@ class PhotosViewModel {
     }
     
     func getPhotos() {
-        dataService.getPhotos(query: "Porsche Street Cars", count: 40) { result in
+        dataService.getPhotos(query: "Porsche Vehicles", count: 100) { result in
             switch result {
             case .success(let data):
                 self.allPhotos = data

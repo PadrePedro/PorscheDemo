@@ -33,6 +33,7 @@ class PhotosViewController: UICollectionViewController {
     }
     
     func setup() {
+        collectionView.backgroundColor = UIColor(named: "appBackground")
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.reuseId)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -68,6 +69,16 @@ class PhotosViewController: UICollectionViewController {
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
+    static func getFlowLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+            layout.itemSize = CGSize(width: 100, height: 100)
+            layout.minimumInteritemSpacing = 8
+            layout.minimumLineSpacing = 8
+            layout.headerReferenceSize = CGSize(width: 0, height: 40)
+            layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        return layout
+    }
+    
     static func getLayout() -> UICollectionViewLayout {
       return UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
         let isPhone = layoutEnvironment.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiom.phone
@@ -78,6 +89,7 @@ class PhotosViewController: UICollectionViewController {
         let itemCount = isPhone ? 1 : 3
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: itemCount)
+          group.interItemSpacing = .fixed(10)
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         section.interGroupSpacing = 10
@@ -91,7 +103,17 @@ class PhotosViewController: UICollectionViewController {
         self.collectionView.collectionViewLayout.invalidateLayout()
       }, completion: nil)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = viewModel.photos.value[indexPath.row]
+        let vc = PhotoDetailViewController()
+        vc.photoData = photo
+        present(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
+    }
 }
+
+
 
 extension PhotosViewController: UISearchResultsUpdating {
     
