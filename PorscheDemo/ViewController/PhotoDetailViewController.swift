@@ -19,6 +19,7 @@ class PhotoDetailViewController: UIViewController {
     var photoData: PhotoData!
     
     let margin = 20.0
+    let smallMargin = 15.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class PhotoDetailViewController: UIViewController {
         
         descriptionLabel.text = photoData.desc
         photographerLabel.text = photoData.getUserInfo()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        true
     }
     
     func setup() {
@@ -37,18 +42,20 @@ class PhotoDetailViewController: UIViewController {
         profileImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImageView.layer.cornerRadius = 25
+        profileImageView.clipsToBounds = true
 
         view.addSubview(photographerLabel)
         photographerLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        photographerLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: margin).isActive = true
+        photographerLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: smallMargin).isActive = true
         photographerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin).isActive = true
         photographerLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
         
         view.addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
-        descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: profileImageView.topAnchor, constant: -margin).isActive = true
         descriptionLabel.numberOfLines = 0
 

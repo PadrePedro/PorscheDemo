@@ -32,6 +32,10 @@ class PhotosViewController: UICollectionViewController {
 
     }
     
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
     func setup() {
         collectionView.backgroundColor = UIColor(named: "appBackground")
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.reuseId)
