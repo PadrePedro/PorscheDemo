@@ -30,7 +30,6 @@ class PhotoDetailViewController: UIViewController {
     
     func setup() {
         view.backgroundColor = UIColor(named: "appBackground")
-        
         // photographer image
         view.addSubview(profileImageView)
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +65,7 @@ class PhotoDetailViewController: UIViewController {
         shareButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(shareButton)
         shareButton.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
-        shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
+        shareButton.addTarget(self, action: #selector(share(_:)), for: .touchUpInside)
         shareButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
         shareButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
 
@@ -74,7 +73,11 @@ class PhotoDetailViewController: UIViewController {
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
+                    self?.imageView.alpha = 0
                     self?.imageView.image = image
+                    UIView.animate(withDuration: 0.6) {
+                        self?.imageView.alpha = 1
+                    }
                 }
             case .failure(let error):
                 print(error)
@@ -92,11 +95,11 @@ class PhotoDetailViewController: UIViewController {
         }
     }
     
-    @objc func share() {
+    @objc func share(_ sender: UIView) {
         if let image = imageView.image {
             let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])
             vc.modalPresentationStyle = .popover
-            vc.popoverPresentationController?.sourceView = view
+            vc.popoverPresentationController?.sourceView = sender
             present(vc, animated: true)
         }
     }

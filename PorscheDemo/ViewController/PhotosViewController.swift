@@ -37,7 +37,7 @@ class PhotosViewController: UICollectionViewController {
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.reuseId)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Porsche Cars"
+        searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -108,8 +108,9 @@ class PhotosViewController: UICollectionViewController {
         let photo = viewModel.photos.value[indexPath.row]
         let vc = PhotoDetailViewController()
         vc.photoData = photo
-        present(vc, animated: true)
-//        navigationController?.pushViewController(vc, animated: true)
+//        present(vc, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
