@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+/**
+ Simple ImageLoader utility class
+ */
 class ImageLoader {
     
     static let shared = ImageLoader()

@@ -10,6 +10,9 @@ import UIKit
 
 extension UIView {
     
+    /**
+     Shrink image with animation
+     */
     func shrink(down: Bool) {
       UIView.animate(withDuration: 0.3) {
         if down {

@@ -8,11 +8,16 @@
 import Foundation
 import UIKit
 
+/**
+ View for each cell in the photo collection view
+ */
 class PhotoCollectionViewCell: UICollectionViewCell {
     
     static let reuseId = String(describing: PhotoCollectionViewCell.self)
-    
+
+    /// car image
     let imageView = UIImageView()
+    /// description
     let label = UILabel()
     
     override init(frame: CGRect) {
@@ -26,7 +31,8 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     override var isHighlighted: Bool {
         didSet {
-          shrink(down: isHighlighted)
+            // shrink image when depressed
+            shrink(down: isHighlighted)
         }
       }
     
@@ -48,7 +54,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         let labelBottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -10)
         let labelTrailing = NSLayoutConstraint(item: label, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -10)
         NSLayoutConstraint.activate([labelLeading, labelBottom, labelTrailing])
-//        label.numberOfLines = 0
     }
     
     

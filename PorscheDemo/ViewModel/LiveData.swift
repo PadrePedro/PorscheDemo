@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ To support MVVM, LiveData is used to wrap values that will notify listeners when udpated.
+ */
 class LiveData<T> {
     
     typealias Listener = (T)->Void

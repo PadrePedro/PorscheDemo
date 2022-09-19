@@ -24,12 +24,14 @@ class PhotoDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        loadImages()
         
         descriptionLabel.text = photoData.desc
         photographerLabel.text = photoData.getUserInfo()
     }
     
     override var prefersStatusBarHidden: Bool {
+        // hide status bar
         true
     }
     
@@ -75,7 +77,9 @@ class PhotoDetailViewController: UIViewController {
         shareButton.addTarget(self, action: #selector(share(_:)), for: .touchUpInside)
         shareButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
         shareButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
-
+    }
+    
+    func loadImages() {
         ImageLoader.shared.loadImage(url: photoData.urls.full) { [weak self] result in
             switch result {
             case .success(let image):
@@ -102,6 +106,9 @@ class PhotoDetailViewController: UIViewController {
         }
     }
     
+    /**
+     Handle share functionality for image
+     */
     @objc func share(_ sender: UIView) {
         if let image = imageView.image {
             let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])

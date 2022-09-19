@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ DataService protocol
+ */
 protocol DataService {
-    func getPhotos(query: String, count: Int, completion: @escaping (Result<[PhotoData],Error>)->Void)
+    func getPhotos(query: String, page: Int, count: Int, completion: @escaping (Result<[PhotoData],Error>)->Void)
 }

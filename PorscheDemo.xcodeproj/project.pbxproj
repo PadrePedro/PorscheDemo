@@ -18,7 +18,7 @@
 		D299940728D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */; };
 		D299941528D6B4C000AB9FA4 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941428D6B4C000AB9FA4 /* DataService.swift */; };
 		D299941828D6B55F00AB9FA4 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941728D6B55F00AB9FA4 /* PhotoData.swift */; };
-		D299941A28D6B85E00AB9FA4 /* RestDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941928D6B85E00AB9FA4 /* RestDataService.swift */; };
+		D299941A28D6B85E00AB9FA4 /* UnsplashDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941928D6B85E00AB9FA4 /* UnsplashDataService.swift */; };
 		D299941D28D6C1DC00AB9FA4 /* LiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941C28D6C1DC00AB9FA4 /* LiveData.swift */; };
 		D299942028D6C31D00AB9FA4 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299941F28D6C31D00AB9FA4 /* PhotosViewController.swift */; };
 		D299942228D6C34D00AB9FA4 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942128D6C34D00AB9FA4 /* PhotosViewModel.swift */; };
@@ -61,7 +61,7 @@
 		D299940628D6B48200AB9FA4 /* PorscheDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D299941428D6B4C000AB9FA4 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D299941728D6B55F00AB9FA4 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
-		D299941928D6B85E00AB9FA4 /* RestDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDataService.swift; sourceTree = "<group>"; };
+		D299941928D6B85E00AB9FA4 /* UnsplashDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashDataService.swift; sourceTree = "<group>"; };
 		D299941C28D6C1DC00AB9FA4 /* LiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveData.swift; sourceTree = "<group>"; };
 		D299941F28D6C31D00AB9FA4 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		D299942128D6C34D00AB9FA4 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				D299941428D6B4C000AB9FA4 /* DataService.swift */,
-				D299941928D6B85E00AB9FA4 /* RestDataService.swift */,
+				D299941928D6B85E00AB9FA4 /* UnsplashDataService.swift */,
 				D299942628D7910300AB9FA4 /* ImageLoader.swift */,
 			);
 			path = Service;
@@ -336,7 +336,7 @@
 				D299942B28D7CAD100AB9FA4 /* PhotoDetailViewController.swift in Sources */,
 				D29993E828D6B47E00AB9FA4 /* ViewController.swift in Sources */,
 				D299942728D7910300AB9FA4 /* ImageLoader.swift in Sources */,
-				D299941A28D6B85E00AB9FA4 /* RestDataService.swift in Sources */,
+				D299941A28D6B85E00AB9FA4 /* UnsplashDataService.swift in Sources */,
 				D299941828D6B55F00AB9FA4 /* PhotoData.swift in Sources */,
 				D29993E428D6B47E00AB9FA4 /* AppDelegate.swift in Sources */,
 				D29993E628D6B47E00AB9FA4 /* SceneDelegate.swift in Sources */,

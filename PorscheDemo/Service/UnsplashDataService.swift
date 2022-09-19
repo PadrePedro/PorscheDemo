@@ -11,18 +11,22 @@ enum QueryError: Error {
     case invalidUrl
 }
 
-class RestDataService: DataService {
+/**
+ REST version of DataService using Unsplash API
+ */
+class UnsplashDataService: DataService {
     
     // demo access key for Unsplash
     let accessKey = "D3FC-fuM9zlJ0_KUxx3xiunKYobejLZ1gDx-Y2sGziY"
     
-    func getPhotos(query: String, count: Int, completion: @escaping (Result<[PhotoData], Error>) -> Void) {
+    func getPhotos(query: String, page: Int, count: Int, completion: @escaping (Result<[PhotoData], Error>) -> Void) {
         let queryString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let urlString = "https://api.unsplash.com/search/photos?query=\(queryString)&per_page=\(count)&page=2&client_id=\(accessKey)"
+        let urlString = "https://api.unsplash.com/search/photos?query=\(queryString)&per_page=\(count)&page=\(page)&client_id=\(accessKey)"
         guard let url = URL(string: urlString) else {
             completion(Result.failure(QueryError.invalidUrl))
             return
         }
+        print(urlString)
         URLSession.shared.dataTask(with: url) { data, resp, error in
             if let error = error {
                 completion(Result.failure(error))

@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+/**
+ Main view controller for app.  Displays UICollectionView of photos
+ */
 class PhotosViewController: UICollectionViewController {
     
     enum Section {
@@ -15,24 +18,27 @@ class PhotosViewController: UICollectionViewController {
     }
     
     /// view model managing data to be displayed
-    var viewModel = PhotosViewModel(dataService: RestDataService())
+    var viewModel = PhotosViewModel(dataService: UnsplashDataService())
     
-    // UICollectionView diffable datasource
+    /// UICollectionView diffable datasource
     lazy var dataSource = createDataSource()
-    private var searchController = UISearchController(searchResultsController: nil)
+    
+    /// search bar controller
+    var searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         viewModel.photos.bind { _ in
+            // when photos get updated, recreate snapshot
             self.createSnapshot()
         }
+        // load data from data service
         viewModel.getPhotos()
-        
-
     }
     
     override var prefersStatusBarHidden: Bool {
+        // hide status bar
         true
     }
     
@@ -73,16 +79,6 @@ class PhotosViewController: UICollectionViewController {
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
-    static func getFlowLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewFlowLayout()
-            layout.itemSize = CGSize(width: 100, height: 100)
-            layout.minimumInteritemSpacing = 8
-            layout.minimumLineSpacing = 8
-            layout.headerReferenceSize = CGSize(width: 0, height: 40)
-            layout.sectionInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
-        return layout
-    }
-    
     static func getLayout() -> UICollectionViewLayout {
       return UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
         let isPhone = layoutEnvironment.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiom.phone
@@ -112,7 +108,6 @@ class PhotosViewController: UICollectionViewController {
         let photo = viewModel.photos.value[indexPath.row]
         let vc = PhotoDetailViewController()
         vc.photoData = photo
-//        present(vc, animated: true)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -124,8 +119,5 @@ extension PhotosViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         viewModel.filterPhotos(query: searchController.searchBar.text)
-        print("updateSearchResult")
     }
-    
-    
 }

@@ -35,7 +35,7 @@ class PorscheDemoTests: XCTestCase {
     
     func testGetPhotos() throws {
         let exp = expectation(description: "testGetPhotos")
-        let service = RestDataService()
+        let service = UnsplashDataService()
         service.getPhotos(query: "Porsche cars", count: 20) { result in
             switch result {
             case .success(let resp):
