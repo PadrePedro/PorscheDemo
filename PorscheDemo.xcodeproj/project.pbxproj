@@ -26,6 +26,19 @@
 		D299942728D7910300AB9FA4 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942628D7910300AB9FA4 /* ImageLoader.swift */; };
 		D299942928D7B3F400AB9FA4 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942828D7B3F400AB9FA4 /* UIViewExt.swift */; };
 		D299942B28D7CAD100AB9FA4 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942A28D7CAD100AB9FA4 /* PhotoDetailViewController.swift */; };
+		D299942D28D9399000AB9FA4 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D299942C28D9398F00AB9FA4 /* MockDataService.swift */; };
+		D299942F28D948C100AB9FA4 /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = D299942E28D945A100AB9FA4 /* mockdata.json */; };
+		D299943028D948C300AB9FA4 /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = D299942E28D945A100AB9FA4 /* mockdata.json */; };
+		D299943328DA37DE00AB9FA4 /* mockdata-1.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943228DA369000AB9FA4 /* mockdata-1.json */; };
+		D299943428DA37E100AB9FA4 /* mockdata-1.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943228DA369000AB9FA4 /* mockdata-1.json */; };
+		D299943728DA39A800AB9FA4 /* mockdata-2.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943528DA384D00AB9FA4 /* mockdata-2.json */; };
+		D299943828DA39A900AB9FA4 /* mockdata-2.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943528DA384D00AB9FA4 /* mockdata-2.json */; };
+		D299943928DA39AF00AB9FA4 /* mockdata-3.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943628DA386900AB9FA4 /* mockdata-3.json */; };
+		D299943A28DA39B000AB9FA4 /* mockdata-3.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943628DA386900AB9FA4 /* mockdata-3.json */; };
+		D299943D28DA3B6B00AB9FA4 /* mockdata-5.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943C28DA3B4500AB9FA4 /* mockdata-5.json */; };
+		D299943E28DA3B6B00AB9FA4 /* mockdata-4.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */; };
+		D299943F28DA3B6C00AB9FA4 /* mockdata-5.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943C28DA3B4500AB9FA4 /* mockdata-5.json */; };
+		D299944028DA3B6C00AB9FA4 /* mockdata-4.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +82,13 @@
 		D299942628D7910300AB9FA4 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		D299942828D7B3F400AB9FA4 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		D299942A28D7CAD100AB9FA4 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		D299942C28D9398F00AB9FA4 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		D299942E28D945A100AB9FA4 /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
+		D299943228DA369000AB9FA4 /* mockdata-1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-1.json"; sourceTree = "<group>"; };
+		D299943528DA384D00AB9FA4 /* mockdata-2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-2.json"; sourceTree = "<group>"; };
+		D299943628DA386900AB9FA4 /* mockdata-3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-3.json"; sourceTree = "<group>"; };
+		D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-4.json"; sourceTree = "<group>"; };
+		D299943C28DA3B4500AB9FA4 /* mockdata-5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-5.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +139,7 @@
 		D29993E228D6B47E00AB9FA4 /* PorscheDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D299943128DA364D00AB9FA4 /* Data */,
 				D299942328D6C6BF00AB9FA4 /* View */,
 				D299941E28D6C30200AB9FA4 /* ViewController */,
 				D299941B28D6C1CC00AB9FA4 /* ViewModel */,
@@ -158,6 +179,7 @@
 				D299941428D6B4C000AB9FA4 /* DataService.swift */,
 				D299941928D6B85E00AB9FA4 /* UnsplashDataService.swift */,
 				D299942628D7910300AB9FA4 /* ImageLoader.swift */,
+				D299942C28D9398F00AB9FA4 /* MockDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -195,6 +217,19 @@
 				D299942828D7B3F400AB9FA4 /* UIViewExt.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D299943128DA364D00AB9FA4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D299942E28D945A100AB9FA4 /* mockdata.json */,
+				D299943228DA369000AB9FA4 /* mockdata-1.json */,
+				D299943528DA384D00AB9FA4 /* mockdata-2.json */,
+				D299943628DA386900AB9FA4 /* mockdata-3.json */,
+				D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */,
+				D299943C28DA3B4500AB9FA4 /* mockdata-5.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +336,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D299943928DA39AF00AB9FA4 /* mockdata-3.json in Resources */,
+				D299943728DA39A800AB9FA4 /* mockdata-2.json in Resources */,
+				D299943428DA37E100AB9FA4 /* mockdata-1.json in Resources */,
+				D299944028DA3B6C00AB9FA4 /* mockdata-4.json in Resources */,
 				D29993F028D6B48100AB9FA4 /* LaunchScreen.storyboard in Resources */,
+				D299942F28D948C100AB9FA4 /* mockdata.json in Resources */,
+				D299943F28DA3B6C00AB9FA4 /* mockdata-5.json in Resources */,
 				D29993ED28D6B48100AB9FA4 /* Assets.xcassets in Resources */,
 				D29993EB28D6B47E00AB9FA4 /* Main.storyboard in Resources */,
 			);
@@ -311,6 +352,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D299943E28DA3B6B00AB9FA4 /* mockdata-4.json in Resources */,
+				D299943828DA39A900AB9FA4 /* mockdata-2.json in Resources */,
+				D299943028D948C300AB9FA4 /* mockdata.json in Resources */,
+				D299943D28DA3B6B00AB9FA4 /* mockdata-5.json in Resources */,
+				D299943328DA37DE00AB9FA4 /* mockdata-1.json in Resources */,
+				D299943A28DA39B000AB9FA4 /* mockdata-3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +380,7 @@
 				D299942528D6C6E000AB9FA4 /* PhotoCollectViewCell.swift in Sources */,
 				D299942028D6C31D00AB9FA4 /* PhotosViewController.swift in Sources */,
 				D299942928D7B3F400AB9FA4 /* UIViewExt.swift in Sources */,
+				D299942D28D9399000AB9FA4 /* MockDataService.swift in Sources */,
 				D299942B28D7CAD100AB9FA4 /* PhotoDetailViewController.swift in Sources */,
 				D29993E828D6B47E00AB9FA4 /* ViewController.swift in Sources */,
 				D299942728D7910300AB9FA4 /* ImageLoader.swift in Sources */,

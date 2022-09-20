@@ -13,19 +13,20 @@ import UIKit
  */
 class PhotosViewController: UICollectionViewController {
     
-    enum Section {
-        case first
-    }
-    
     /// view model managing data to be displayed
     var viewModel = PhotosViewModel(dataService: UnsplashDataService())
-    
+    //    var viewModel = PhotosViewModel(dataService: MockDataService())
+
     /// UICollectionView diffable datasource
     lazy var dataSource = createDataSource()
     
     /// search bar controller
     var searchController = UISearchController(searchResultsController: nil)
 
+    enum Section {
+        case first
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

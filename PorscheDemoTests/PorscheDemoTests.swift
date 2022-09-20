@@ -36,7 +36,22 @@ class PorscheDemoTests: XCTestCase {
     func testGetPhotos() throws {
         let exp = expectation(description: "testGetPhotos")
         let service = UnsplashDataService()
-        service.getPhotos(query: "Porsche cars", count: 20) { result in
+        service.getPhotos(query: "Porsche cars", page: 1, count: 20) { result in
+            switch result {
+            case .success(let resp):
+                print(resp)
+                exp.fulfill()
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+        }
+        waitForExpectations(timeout: 5)
+    }
+    
+    func testMockGetPhotos() throws {
+        let exp = expectation(description: "testGetPhotos")
+        let service = MockDataService()
+        service.getPhotos(query: "Porsche cars", page: 1, count: 20) { result in
             switch result {
             case .success(let resp):
                 print(resp)

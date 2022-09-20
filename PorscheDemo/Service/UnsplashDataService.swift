@@ -33,7 +33,7 @@ class UnsplashDataService: DataService {
                 return
             }
             if let data = data {
-                print(String(data: data, encoding: .utf8))
+                let string = String(data: data, encoding: .utf8)
                 do {
                     let resp = try JSONDecoder().decode(PhotoDataResponse.self, from: data)
                     completion(Result.success(resp.results))
