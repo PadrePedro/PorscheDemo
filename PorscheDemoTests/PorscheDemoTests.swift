@@ -33,6 +33,9 @@ class PorscheDemoTests: XCTestCase {
         }
     }
     
+    /**
+     Test getPhotos from UnsplashDataService
+     */
     func testGetPhotos() throws {
         let exp = expectation(description: "testGetPhotos")
         let service = UnsplashDataService()
@@ -48,6 +51,9 @@ class PorscheDemoTests: XCTestCase {
         waitForExpectations(timeout: 5)
     }
     
+    /**
+     Test getPhotos from MockDataService
+     */
     func testMockGetPhotos() throws {
         let exp = expectation(description: "testGetPhotos")
         let service = MockDataService()
@@ -63,4 +69,16 @@ class PorscheDemoTests: XCTestCase {
         waitForExpectations(timeout: 5)
     }
 
+    /**
+     Test PhotosViewModel to see verify that getPhotos() calls back into listener
+     */
+    func testViewModel() throws {
+        let exp = expectation(description: "testViewModel")
+        let vm = PhotosViewModel(dataService: UnsplashDataService())
+        vm.photos.bind { _ in
+            exp.fulfill()
+        }
+        vm.getPhotos()
+        waitForExpectations(timeout: 5)
+    }
 }
