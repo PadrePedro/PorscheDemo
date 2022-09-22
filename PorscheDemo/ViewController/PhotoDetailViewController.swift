@@ -7,10 +7,15 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
+/**
+ Shows details of one photo
+ */
 class PhotoDetailViewController: UIViewController {
     
     let descriptionLabel = UILabel()
+    let sizeLabel = UILabel()
     let photographerLabel = UILabel()
     let shareButton = UIButton()
     let imageView = UIImageView()
@@ -19,7 +24,7 @@ class PhotoDetailViewController: UIViewController {
     var photoData: PhotoData!
     
     let margin = 20.0
-    let smallMargin = 15.0
+    let smallMargin = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,7 @@ class PhotoDetailViewController: UIViewController {
         loadImages()
         
         descriptionLabel.text = photoData.desc
+        sizeLabel.text = photoData.getSize()
         photographerLabel.text = photoData.getUserInfo()
     }
     
@@ -37,6 +43,7 @@ class PhotoDetailViewController: UIViewController {
     
     func setup() {
         view.backgroundColor = UIColor(named: "appBackground")
+        
         // photographer image
         view.addSubview(profileImageView)
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -44,8 +51,11 @@ class PhotoDetailViewController: UIViewController {
         profileImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        profileImageView.layer.cornerRadius = 25
+        profileImageView.layer.cornerRadius = photoData.user.portfolio_url == nil ? 15 : 25
         profileImageView.clipsToBounds = true
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(profileImageTapped(_:))))
+        profileImageView.addShadow()
 
         view.addSubview(photographerLabel)
         photographerLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -54,21 +64,29 @@ class PhotoDetailViewController: UIViewController {
         photographerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: margin).isActive = true
         photographerLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
         
+        // size info
+        view.addSubview(sizeLabel)
+        sizeLabel.translatesAutoresizingMaskIntoConstraints = false
+        sizeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
+        sizeLabel.bottomAnchor.constraint(equalTo: profileImageView.topAnchor, constant: -margin).isActive = true
+
+        // description
         view.addSubview(descriptionLabel)
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: margin).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -margin).isActive = true
-        descriptionLabel.bottomAnchor.constraint(equalTo: profileImageView.topAnchor, constant: -margin).isActive = true
+        descriptionLabel.bottomAnchor.constraint(equalTo: sizeLabel.topAnchor, constant: -smallMargin).isActive = true
         descriptionLabel.numberOfLines = 0
 
         // car image view
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageView.bottomAnchor.constraint(equalTo: descriptionLabel.topAnchor, constant: -margin).isActive = true
+        imageView.clipsToBounds = true
         
         // share button
         shareButton.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +98,7 @@ class PhotoDetailViewController: UIViewController {
     }
     
     func loadImages() {
+        // load photo image
         ImageLoader.shared.loadImage(url: photoData.urls.full) { [weak self] result in
             switch result {
             case .success(let image):
@@ -94,6 +113,7 @@ class PhotoDetailViewController: UIViewController {
                 print(error)
             }
         }
+        // load user profile image
         ImageLoader.shared.loadImage(url: photoData.getProfileImage()) { [weak self] result in
             switch result {
             case .success(let image):
@@ -103,6 +123,17 @@ class PhotoDetailViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+        }
+    }
+    
+    /**
+     Handle tapping of profile image link to user portfolio website, if any
+     */
+    @objc func profileImageTapped(_ sender: UIView) {
+        if let urlString = photoData.user.portfolio_url,
+           let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
         }
     }
     
@@ -128,5 +159,9 @@ extension PhotoData {
     
     func getProfileImage() -> String? {
         return user.profile_image?.large
+    }
+    
+    func getSize() -> String? {
+        return "\(width) x \(height)"
     }
 }

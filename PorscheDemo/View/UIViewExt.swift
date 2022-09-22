@@ -23,4 +23,14 @@ extension UIView {
         }
       }
     }
+    
+    /**
+     Add shadow effect
+     */
+    func addShadow() {
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        layer.shadowRadius = 10
+    }
 }

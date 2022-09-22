@@ -24,6 +24,8 @@ struct PhotoData: Decodable, Hashable {
     let alt_description: String?
     let urls: URLS
     let user: User
+    let width: Int
+    let height: Int
     
     
     var desc: String? {
@@ -43,6 +45,7 @@ struct User: Decodable {
     let name: String?
     let location: String?
     let profile_image: ProfileImage?
+    let portfolio_url: String?
 }
 
 struct URLS: Decodable {
