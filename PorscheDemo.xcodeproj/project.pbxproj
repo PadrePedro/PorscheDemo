@@ -39,6 +39,7 @@
 		D299943E28DA3B6B00AB9FA4 /* mockdata-4.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */; };
 		D299943F28DA3B6C00AB9FA4 /* mockdata-5.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943C28DA3B4500AB9FA4 /* mockdata-5.json */; };
 		D299944028DA3B6C00AB9FA4 /* mockdata-4.json in Resources */ = {isa = PBXBuildFile; fileRef = D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */; };
+		D299944628DE26F000AB9FA4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D299944528DE26EF00AB9FA4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		D299943628DA386900AB9FA4 /* mockdata-3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-3.json"; sourceTree = "<group>"; };
 		D299943B28DA3B1E00AB9FA4 /* mockdata-4.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-4.json"; sourceTree = "<group>"; };
 		D299943C28DA3B4500AB9FA4 /* mockdata-5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mockdata-5.json"; sourceTree = "<group>"; };
+		D299944528DE26EF00AB9FA4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D29993E228D6B47E00AB9FA4 /* PorscheDemo */,
+				D299944528DE26EF00AB9FA4 /* README.md */,
 				D29993F928D6B48100AB9FA4 /* PorscheDemoTests */,
 				D299940328D6B48200AB9FA4 /* PorscheDemoUITests */,
 				D29993E128D6B47E00AB9FA4 /* Products */,
@@ -338,6 +341,7 @@
 			files = (
 				D299943928DA39AF00AB9FA4 /* mockdata-3.json in Resources */,
 				D299943728DA39A800AB9FA4 /* mockdata-2.json in Resources */,
+				D299944628DE26F000AB9FA4 /* README.md in Resources */,
 				D299943428DA37E100AB9FA4 /* mockdata-1.json in Resources */,
 				D299944028DA3B6C00AB9FA4 /* mockdata-4.json in Resources */,
 				D29993F028D6B48100AB9FA4 /* LaunchScreen.storyboard in Resources */,
